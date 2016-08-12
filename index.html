@@ -19,7 +19,8 @@
           <input id="name" class="form-control" type="text">
         </div>
       </form>
-      <!-- Survey Radio Buttons -->
+      <!-- Survey Starts-->
+      <!-- Radio Button Questions-->
       <h4>Do you have an Android phone?</h4>
       <form id="question1">
       <div class="radio">
@@ -56,8 +57,31 @@
       </div>
     </form>
 
+    <h4>What have you enjoyed doing more the first two weeks?<h4>
+    <form id="question3">
+      <div class="radio">
+        <label>
+          <input type="radio" name="question3" value="true" checked>HTML/CSS
+        </label>
+        <label>
+          <input type="radio" name="question3" value="false">JS/JQuery
+        </label><hr>
+      </div>
+    </form>
+
+    <!-- Drop Down Box-->
     <h4>Choose which city you would prefer to live in?</h4>
-      
+    <form>
+      <select class="form-control" id="animal">
+        <option value="1">Stockholm</option>
+        <option value="2">San Francisco</option>
+        <option value="3">Seattle</option>
+      </select>
+    </form>
+    <!-- Submit Button-->
+    <form id=button>
+      <button type="submit" class="btn-success">Go!</button>
+    </form>
 
     </div>
   </body>
