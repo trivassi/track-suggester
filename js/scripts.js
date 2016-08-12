@@ -2,28 +2,35 @@
 $(document).ready(function() {
   $("form#button").submit(function(event){
 
-
+//global variables to be able to keep score which track is best for user
     var csharp = 0;
     var android = 0;
     var design = 0;
 
-
+//create variables from the values received in the survey
     var q1 = $("input:radio[name=question1]:checked").val();
     var q2 = $("input:radio[name=question2]:checked").val();
-    var q3 = $("input:radio[name=question2]:checked").val();
-    var q4 = $("input:radio[name=question2]:checked").val();
+    var q3 = $("input:radio[name=question3]:checked").val();
+    var q4 = $("input:radio[name=question4]:checked").val();
     var q5 = $("#city").val();
 
 
-
+//statements to add points to the variables from above
     if (q1 === "true"){
-      android += 1;
+      android += 2;
     }
     if (q2 === "true"){
       csharp += 1;
     }
     if (q3 === "true"){
+      design += 2;
+    }
+    if (q4 === "true"){
       design += 1;
+    }
+    if (q4 === "false"){
+      android += 1;
+      csharp += 1;
     }
     if (q5 === "1"){
       design += 1;
@@ -34,13 +41,9 @@ $(document).ready(function() {
     if (q5 === "3"){
       csharp += 1;
     }
-    if (q4 === "true"){
-      design += 1;
-    } else if (q4 === "false"){
-      android += 1;
-      csharp += 1;
-    }
 
+
+//based on the scores it will suggest the one with the most points
     if(android > design && android > csharp) {
       $("#android").show();
       $("#csharp").hide();
@@ -58,16 +61,6 @@ $(document).ready(function() {
       $("#design").hide();
       alert("C# is the best track for you!")
     }
-
-
-      // if (total > 1) {
-      //   alert("Thanks " + name + "! Your score is: " + total + " You are a liberal.")
-      // } else if (total === 1) {
-      //   alert("Thanks " + name + "! Your score is: " + total + " You are a moderate.")
-      // } else {
-      //   alert("Thanks " + name + "! Your score is: " + total + " You are a conservative.")
-      // }
-
 
     event.preventDefault();
 
