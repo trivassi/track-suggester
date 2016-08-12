@@ -51,17 +51,16 @@ $(document).ready(function() {
       $("#android").show();
       $("#csharp").hide();
       $("#design").hide();
-      alert("Android is the best track for you!")
+      alert("The Java/Android track is the best fit for you!")
     } else if (design > csharp && design > android) {
       $("#design").show();
       $("#csharp").hide();
       $("#android").hide();
-      alert("Design is the best track for you!")
-    } else if (csharp > android && csharp > design) {
+      alert("The CSS/Design track is the best fit for you!")    } else if (csharp > android && csharp > design) {
       $("#csharp").show();
       $("#android").hide();
       $("#design").hide();
-      alert("C# is the best track for you!")
+      alert("C#/.NET is the best track for you!")
     }
 
 
