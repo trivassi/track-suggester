@@ -12,6 +12,8 @@ $(document).ready(function() {
     var q2 = $("input:radio[name=question2]:checked").val();
     var q3 = $("input:radio[name=question2]:checked").val();
     var q4 = $("input:radio[name=question2]:checked").val();
+    var q5 = $("#city").val();
+
 
 
     if (q1 === "true"){
@@ -23,6 +25,15 @@ $(document).ready(function() {
     if (q3 === "true"){
       design += 1;
     }
+    if (q5 === "1"){
+      design += 1;
+    }
+    if (q5 === "2"){
+      android += 1;
+    }
+    if (q5 === "3"){
+      csharp += 1;
+    }
     if (q4 === "true"){
       design += 1;
     } else if (q4 === "false"){
@@ -30,7 +41,7 @@ $(document).ready(function() {
       csharp += 1;
     }
 
-
+    alert(android);
       // if (total > 1) {
       //   alert("Thanks " + name + "! Your score is: " + total + " You are a liberal.")
       // } else if (total === 1) {
