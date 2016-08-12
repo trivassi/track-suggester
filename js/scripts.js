@@ -7,6 +7,7 @@ $(document).ready(function() {
     var android = 0;
     var design = 0;
 
+
 //create variables from the values received in the survey
     var q1 = $("input:radio[name=question1]:checked").val();
     var q2 = $("input:radio[name=question2]:checked").val();
@@ -28,22 +29,24 @@ $(document).ready(function() {
     if (q4 === "true"){
       design += 1;
     }
-    if (q4 === "false"){
+    else if (q4 === "false"){
       android += 1;
       csharp += 1;
     }
     if (q5 === "1"){
       design += 1;
-    }
-    if (q5 === "2"){
+    } else if (q5 === "2"){
       android += 1;
-    }
-    if (q5 === "3"){
+    } else if (q5 === "3"){
       csharp += 1;
     }
 
 
 //based on the scores it will suggest the one with the most points
+
+// alert("android " + android);
+// alert("c "+csharp);
+// alert("design " + design);
     if(android > design && android > csharp) {
       $("#android").show();
       $("#csharp").hide();
@@ -54,13 +57,13 @@ $(document).ready(function() {
       $("#csharp").hide();
       $("#android").hide();
       alert("Design is the best track for you!")
-
     } else if (csharp > android && csharp > design) {
       $("#csharp").show();
       $("#android").hide();
       $("#design").hide();
       alert("C# is the best track for you!")
     }
+
 
     event.preventDefault();
 
