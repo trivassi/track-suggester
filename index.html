@@ -3,15 +3,15 @@
   <head>
     <title>Track Suggester</title>
     <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
-    <script src="js/scripts.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/scripts.js"></script>
   </head>
   <body>
 
       <h1>Track Suggester</h1>
       <h3>See which Epicodus track is best for you!</h3>
-      <!-- Enter Name -->
+<!-- Enter Name -->
       <div class="container">
       <form id="info">
         <div class="form-group">
@@ -19,8 +19,8 @@
           <input id="name" class="form-control" type="text">
         </div>
       </form>
-      <!-- Survey Starts-->
-      <!-- Radio Button Questions-->
+<!-- Survey Starts-->
+<!-- Radio Button Questions-->
       <h4>Do you have an Android phone?</h4>
       <form id="question1">
       <div class="radio">
@@ -69,7 +69,7 @@
       </div>
     </form>
 
-    <!-- Drop Down Box-->
+<!-- Drop Down Box-->
     <h4>Choose which city you would prefer to live in?</h4>
     <form>
       <select class="form-control" id="city">
@@ -78,11 +78,26 @@
         <option value="3">Seattle</option>
       </select>
     </form>
-    <!-- Submit Button-->
+<!-- Submit Button-->
     <form id=button>
       <button type="submit" class="btn-success">Go!</button>
     </form>
 
+<!-- Suggestions-->
+      <div class="row">
+        <div class="col-md-4" id="android">
+        <h3>Java/Android Track</h3>
+          <img src="img/android.png" alt="an image of a turtle">
+        </div>
+        <div class="col-md-4" id="csharp">
+        <h3>C#/.NET Track</h3>
+          <img src="img/csharp.jpg" alt="an image of a turtle">
+        </div>
+        <div class="col-md-4" id="design">
+        <h3>CSS/Design</h3>
+          <img src="img/design.png" alt="an image of a turtle">
+        </div>
+      </div>
     </div>
   </body>
 </html>

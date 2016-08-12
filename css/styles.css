@@ -1,3 +1,11 @@
 h1, h3 {
   text-align: center;
 }
+
+.suggestions {
+  display: none;
+}
+
+.row img {
+  width:300px;
+}
